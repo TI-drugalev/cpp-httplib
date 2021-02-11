@@ -58,7 +58,7 @@
 	FindPython3 requires Cmake v3.12
 	ARCH_INDEPENDENT option of write_basic_package_version_file() requires Cmake v3.14
 ]]
-cmake_minimum_required(VERSION 3.14.0 FATAL_ERROR)
+cmake_minimum_required(VERSION 3.11 FATAL_ERROR)
 
 # On systems without Git installed, there were errors since execute_process seemed to not throw an error without it?
 find_package(Git QUIET)
@@ -276,7 +276,7 @@ else()
 		COMPATIBILITY SameMajorVersion
 		# Tells Cmake that it's a header-only lib
 		# Mildly useful for end-users :)
-		ARCH_INDEPENDENT
+		# ARCH_INDEPENDENT
 	)
 endif()
 
